@@ -5,21 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
-  </head>
-  <body>
-
-    <h2 data-state="Hello {name}" onclick="changename()" />
-
-
     <script src="/src/main.ts"></script>
 
+  </head>
+  <body>
+    <h2 data-state="{lover1} + {lover2} = {something}" />
+
     <script>
-      let states = initStates({ name: "Sofia!" })
-
-      function changename() {
-        states.name = "Igor!"
-      }
-
+      let states = initStates({ lover1: "Igor", lover2: "Sofia", something: "Love" })
     </script>
   </body>
 </html>
