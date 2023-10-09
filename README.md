@@ -60,11 +60,11 @@ That's it! For initialization with function initStates
 Right now you can change state only with direct assignment. In the future, the ability to use methods will be added.
 
 ## Features for future versions
-- [ ] method data-for for iteration
-- [ ] method data-if for conditional rendering
-- [ ] method data-bind for two-way data binding
-- [ ] method data-else for else
-- [ ] method data-else-if for else if
+- [ ] method data-for for iteration: [Issie #2](https://github.com/zhuravkovigor/data-state/issues/2)
+- [ ] method data-if for conditional rendering: [Issie #1](https://github.com/zhuravkovigor/data-state/issues/1)
+- [ ] method data-bind for two-way data binding: [Issie #3](https://github.com/zhuravkovigor/data-state/issues/3)
+- [ ] method data-else for else: [Issie #4](https://github.com/zhuravkovigor/data-state/issues/4)
+- [ ] method data-else-if for else if: [Issie #5](https://github.com/zhuravkovigor/data-state/issues/5)
 
 And other features that will be added in the future.
 
