@@ -10,8 +10,9 @@ const initStates = (states: any) => {
             const matches = text.match(/{(\w+)(\s*[\+\-\*\/]\s*\w+)+}/g);
 
             matches.forEach((match: any) => {
-                // check if math has a text then just join values
-                if (match.match(/(\w+)/g).length > 1) {
+                // join it if stateName has a string value type
+
+                if (match.match(/(\w+)/g).some((stateName: any) => typeof states[stateName] === 'string')) {
                     const result = match.match(/(\w+)/g).reduce((acc: any, stateName: any) => acc + states[stateName], "");
 
                     text.replace(match, "");
@@ -22,9 +23,7 @@ const initStates = (states: any) => {
                 }
 
                 const result = eval(match.replace(/(\w+)/g, (match: any, stateName: any) => states[stateName]))
-
                 text.replace(match, "");
-
                 element.innerHTML = text.replace(/{(\w+)(\s*[\+\-\*\/]\s*\w+)+}/g, result);
             });
 
